@@ -118,7 +118,8 @@ destination = 'Iceland'
 duration = "3 days"
 interests = "Hiking, Exploration, Sight Seeing"
 budget = 5000
-budget_curr = "USD"```
+budget_curr = "USD"
+```
 
 ## 🚧 Future Enhancements
 - Add a "Cost Estimation Agent"
