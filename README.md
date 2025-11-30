@@ -41,8 +41,8 @@ Each agent handles a distinct domain—research vs planning—for reliability an
 ### **2. Autonomous Tool Use**
 Agents independently call tools such as:
 
-- Google Search  
-- Currency converter API  
+- Google Search (From Gemini ADK)
+- ExchangeRate API  
 
 This allows for accurate results grounded in real data.
 
@@ -51,7 +51,7 @@ Agents share context and build upon each other's outputs, forming a predictable 
 
 ---
 
-## 🛠️ Key Features (Aligned With Competition Rubric)
+## 🛠️ Key Features
 
 TripVerse includes more than three required agent features:
 
@@ -68,4 +68,54 @@ TripVerse includes more than three required agent features:
 ---
 
 ## 🏗️ Architecture
+User Input -> Research Agent -> Planner Agent -> Final Output
 
+---
+
+## 🔧 Technology Stack
+
+- Gemini 2.5 Flash Lite  
+- Google Search Tool  
+- ExchangeRate-API  
+- Python (Kaggle Notebook)  
+- Rich library (for console formatting)
+
+---
+
+## 📘 How It Works
+
+### **1. User Inputs**
+Destination, duration, interests, budget, currency.
+
+### **2. Research Agent**
+- Uses Google Search  
+- Retrieves attractions, foods, hidden gems  
+- Checks weather  
+- Produces structured research output  
+
+### **3. Planner Agent**
+- **Must** call currency converter tool first  
+- Reads tool results  
+- Generates Markdown itinerary  
+- Incorporates research data + weather  
+
+### **4. Output**
+A clean, structured, budget-aware trip itinerary.
+
+---
+
+## 🖥️ Running the Notebook
+
+1. Open the Kaggle notebook.  
+2. Add these to **Kaggle Secrets**:
+   - `GEMINI_API_KEY`
+   - `EXCHANGE_RATE_API_KEY`
+
+3. Replace example values:
+
+```python
+destination = 'Iceland'
+duration = "3 days"
+interests = "Hiking, Exploration, Sight Seeing"
+budget = 5000
+budget_curr = "USD"
