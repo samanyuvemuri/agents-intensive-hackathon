@@ -119,3 +119,22 @@ duration = "3 days"
 interests = "Hiking, Exploration, Sight Seeing"
 budget = 5000
 budget_curr = "USD"
+
+## 🚧 Future Enhancements
+- Add a "Cost Estimation Agent"
+- Recommend hotels and restaurants
+- Add offline caching for frequent destinations
+- Deploy to Cloud Run or Agent Engine
+- Add voice-based interactions
+
+## ⭐ Conclusion
+TripVerse demonstrates:
+
+- Multi-agent collaboration
+- Autonomous tool-calling
+- Structured planning
+- Real-time search
+- Gemini-powered reasoning
+- End-to-end orchestration
+
+It is a complete, competition-ready agent system showcasing practical use of the Gemini ecosystem.
